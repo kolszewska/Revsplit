@@ -1,5 +1,4 @@
-name: Run tests
-
+name: Python workflow
 on:
   push:
     branches: [ main ]
@@ -43,3 +42,7 @@ jobs:
       run: |
         source .venv/bin/activate
         pytest tests/
+
+    - name: Wemake Python Stylguide
+      uses: wemake-services/wemake-python-styleguide@0.13.4
+      continue-on-error: true
