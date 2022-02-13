@@ -1,11 +1,7 @@
 """
 Main entry point. Invoke as 'python -m revsplit'
 """
-
-
-def hello_world():
-    print("Hello world")
-
+from revsplit.cli import hello
 
 if __name__ == '__main__':
-    hello_world()
+    hello()
