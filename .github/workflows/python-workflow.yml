@@ -44,5 +44,5 @@ jobs:
         pytest tests/
 
     - name: Wemake Python Stylguide
-      uses: wemake-services/wemake-python-styleguide@0.13.4
+      uses: wemake-services/wemake-python-styleguide@0.16.0
       continue-on-error: true
