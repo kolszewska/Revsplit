@@ -2,6 +2,6 @@ import click
 
 
 @click.command()
-@click.argument('name')
-def hello(name):
-    click.echo(f'Hello {name}!')
+@click.option('--name')
+def hello(name: str):
+    click.echo(f"Hello {name}!")

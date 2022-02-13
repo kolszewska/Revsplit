@@ -10,6 +10,6 @@ def cli_test_runner():
 
 
 def test_hello_world(cli_test_runner):
-    result = cli_test_runner.invoke(hello, ['Karolina'])
+    result = cli_test_runner.invoke(hello, ['--name', 'Karolina'])
     assert result.exit_code == 0
     assert result.output == 'Hello Karolina!\n'
