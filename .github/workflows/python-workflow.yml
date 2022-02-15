@@ -28,7 +28,7 @@ jobs:
       id: cached-poetry-dependencies
       uses: actions/cache@v2
       with:
-        path: .venv
+        path: venv
         key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
 
     - name: Install dependencies
@@ -40,7 +40,7 @@ jobs:
 
     - name: Run tests
       run: |
-        source .venv/bin/activate
+        source venv/bin/activate
         pytest tests/
 
     - name: Wemake Python Stylguide
